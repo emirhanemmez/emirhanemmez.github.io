@@ -12,29 +12,68 @@
   </style>
 </head>
 <body>
-  <h1>MoneyPoly – Support</h1>
-  <p>Digital banker app for your Monopoly games.</p>
+  <div id="content"></div>
 
-  <h2>Contact</h2>
-  <p>For questions, feedback or bug reports:<br>
-     <a href="mailto:emirhanemmezdev@gmail.com">emirhanemmezdev@gmail.com</a>
-  </p>
+  <script>
+    const isTurkish = navigator.language.startsWith('tr');
 
-  <h2>FAQ</h2>
-  <p><strong>How do I create a game?</strong><br>
-     Tap "Create Game", set a name and password, then share the code with your friends.</p>
+    const content = {
+      en: `
+        <h1>MoneyPoly – Support</h1>
+        <p>Digital banker app for your Monopoly games.</p>
 
-  <p><strong>How do I join a game?</strong><br>
-     Tap "Join Game" and enter the game name and password shared by the host.</p>
+        <h2>Contact</h2>
+        <p>For questions, feedback or bug reports:<br>
+           <a href="mailto:emirhanemmezdev@gmail.com">emirhanemmezdev@gmail.com</a>
+        </p>
 
-  <p><strong>Is the app free?</strong><br>
-     Yes. The app is free to use. It contains ads to support development.</p>
+        <h2>FAQ</h2>
+        <p><strong>How do I create a game?</strong><br>
+           Tap "Create Game", set a name and password, then share the code with your friends.</p>
 
-  <p><strong>How do I transfer money?</strong><br>
-     On the game board, tap a player's card or use the bank buttons to send or receive money.</p>
+        <p><strong>How do I join a game?</strong><br>
+           Tap "Join Game" and enter the game name and password shared by the host.</p>
 
-  <h2>Privacy Policy</h2>
-  <p>MoneyPoly uses Google AdMob for advertising and Firebase for real-time game data.
-     We do not sell personal data. For details, contact us at the email above.</p>
+        <p><strong>Is the app free?</strong><br>
+           Yes. The app is free to use. It contains ads to support development.</p>
+
+        <p><strong>How do I transfer money?</strong><br>
+           On the game board, tap a player's card or use the bank buttons to send or receive money.</p>
+
+        <h2>Privacy Policy</h2>
+        <p>MoneyPoly uses Google AdMob for advertising and Firebase for real-time game data.
+           We do not sell personal data. For details, contact us at the email above.</p>
+      `,
+      tr: `
+        <h1>MoneyPoly – Destek</h1>
+        <p>Monopoly oyunların için dijital bankacı uygulaması.</p>
+
+        <h2>İletişim</h2>
+        <p>Soru, geri bildirim veya hata bildirimi için:<br>
+           <a href="mailto:emirhanemmezdev@gmail.com">emirhanemmezdev@gmail.com</a>
+        </p>
+
+        <h2>Sıkça Sorulan Sorular</h2>
+        <p><strong>Oyun nasıl oluşturulur?</strong><br>
+           "Oyun Oluştur" butonuna dokun, isim ve şifre belirle, kodu arkadaşlarınla paylaş.</p>
+
+        <p><strong>Oyuna nasıl katılırım?</strong><br>
+           "Oyuna Katıl" butonuna dokun ve ev sahibinin paylaştığı oyun adı ile şifreyi gir.</p>
+
+        <p><strong>Uygulama ücretsiz mi?</strong><br>
+           Evet, uygulama ücretsizdir. Geliştirmeyi desteklemek için reklam içerir.</p>
+
+        <p><strong>Para transferi nasıl yapılır?</strong><br>
+           Oyun tahtasında bir oyuncunun kartına dokun veya banka butonlarını kullanarak para gönder ya da al.</p>
+
+        <h2>Gizlilik Politikası</h2>
+        <p>MoneyPoly, reklamlar için Google AdMob ve gerçek zamanlı oyun verisi için Firebase kullanır.
+           Kişisel veriler satılmaz. Detaylar için yukarıdaki e-posta adresinden iletişime geç.</p>
+      `
+    };
+
+    document.getElementById('content').innerHTML = isTurkish ? content.tr : content.en;
+    document.documentElement.lang = isTurkish ? 'tr' : 'en';
+  </script>
 </body>
 </html>
